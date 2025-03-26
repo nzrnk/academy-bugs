@@ -1,0 +1,32 @@
+#Workflow
+name: pw tests with allure
+
+on:
+  #ручной запуск
+  workflow_dispatch:
+
+jobs:
+  e2eTests:
+    #timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: install dependencies
+        run: npm install
+      - name: install pw
+        run: npx playwright install --with-deps
+      - name: run pw
+        run: npx playwright test
+        
+          
+      
+      
+    
+
+  
+  
