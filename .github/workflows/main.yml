@@ -22,10 +22,47 @@ jobs:
         run: npx playwright install --with-deps
       - name: run pw
         run: npx playwright test
+      - uses: action/upload-artifact@v4
+        if: always()
+        continue-on-error: true
+        with:
+          name: test-results
+          path: test-results
+          retension-days: 20
+      - uses: action/upload-artifact@v4
+        if: always()
+        continue-on-error: true
+        with:
+          name: allure-results
+          path: allure-results
+          retension-days: 20
+      - uses: action/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - uses: simple-elf/allure-report-action@master
+        if: always()
+        continue-on-error: true
+        id: allure-report
+        with:
+          allure-reuslts: allure-results
+          gh-pages: gh-pages
+          allure-report: allure-report
+          allure-history: allure-history
+          keep-reports: 20
+        name: deploy allure report to gh pages
+      - uses: peaceiris@actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          publish_branch: gh-pages
+          publish_dir: allure-history
         
-          
-      
-      
+        
+        
+        
     
 
   
