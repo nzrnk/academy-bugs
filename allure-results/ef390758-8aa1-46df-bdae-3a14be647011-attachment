@@ -1,0 +1,92 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Изменить количество отображаемых товаров на странице
+- Location: C:\Users\anzrn\academy-bugs\tests\products.spec.js:6:5
+
+# Error details
+
+```
+Error: locator.waitFor: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('div').filter({ hasText: 'You found a crash bug,' }) to be visible
+
+    at C:\Users\anzrn\academy-bugs\src\pages\app.page.js:43:32
+    at App.waitForOverlay (C:\Users\anzrn\academy-bugs\src\pages\app.page.js:42:20)
+    at C:\Users\anzrn\academy-bugs\tests\products.spec.js:9:15
+```
+
+# Test source
+
+```ts
+   1 | import { MainPage, ProductPage, AccountPage, CartPage, SignUpPage } from './index'
+   2 | import { Comment } from "../bulders/comment.builder";
+   3 | import { test } from '@playwright/test';
+   4 |
+   5 |
+   6 | export class App {
+   7 |     constructor(page){
+   8 |         this.page = page;
+   9 |         this.mainPage = new MainPage(page);
+  10 |         this.productPage = new ProductPage(page);
+  11 |         this.signUpPage = new SignUpPage(page);
+  12 |         this.cartPage = new CartPage(page);
+  13 |         this.accountPage = new AccountPage(page);
+  14 |         this.comment = new Comment();
+  15 |
+  16 |         
+  17 |         this.mainPageLink = page.getByRole('link', { name: 'Find Bugs' });
+  18 |         
+  19 |         this.overlay = page.locator('div').filter({ hasText: 'You found a crash bug,' });
+  20 |         this.anotherOverlay = page.locator('div').filter({ hasText: 'You found a crash bug,' }).nth(1)
+  21 |         
+  22 |         this.popup = page.locator('#bug-popup');
+  23 |         this.congratsPopUp = page.locator('#popmake-4406');
+  24 |         
+  25 |         this.cart = page.locator('.single-entry-content');
+  26 |     }
+  27 |
+  28 |     
+  29 |     async goToMainPage(){
+  30 |         await test.step('Перейти на главную страницу', async() => {
+  31 |             await this.mainPageLink.click();
+  32 |         });
+  33 |     }
+  34 |
+  35 |     async waitForPopUp(){
+  36 |         await test.step('Ожидать загрузки поп-апа с информацией по багу', async() => {
+  37 |             await this.popup.waitFor({ state: 'visible' });
+  38 |         });
+  39 |     }
+  40 |
+  41 |     async waitForOverlay(){
+  42 |         await test.step('Ожидать загрузки оверлея', async() => {
+> 43 |             await this.overlay.waitFor({ state: 'visible' });
+     |                                ^ Error: locator.waitFor: Target page, context or browser has been closed
+  44 |         });
+  45 |     }
+  46 |
+  47 |     async waitForCart(){
+  48 |         await test.step('Ожидать загрузки корзины', async() => {
+  49 |             await this.cart.waitFor({ state: 'visible' });
+  50 |         });
+  51 |     }
+  52 |     
+  53 |     async waitForCongratsPopUp(){
+  54 |         await test.step('Ожидать загрузки поп-апа с поздравлением о найденном первом баге', async() => {
+  55 |             await await this.congratsPopUp.waitFor({ state: 'visible' });
+  56 |         })
+  57 |     }
+  58 |
+  59 |     async waitForAnotherOverlay(){
+  60 |         await test.step('Ожидать загрузки оверлея', async() => {
+  61 |             await this.anotherOverlay.waitFor({ state: 'visible' });
+  62 |         });
+  63 |     }
+  64 | }
+```
