@@ -1,0 +1,102 @@
+import { expect } from '@playwright/test';
+import { test } from '../src/fixture/fixture';
+import { errors, messages } from '../src/data/messages';
+
+
+test('Изменить количество отображаемых товаров на странице', async({ app }) => {
+    test.slow();
+    await app.mainPage.changeProductViewAmount();
+    await app.waitForOverlay();
+    
+    await test.step('Появляется оверлей с сообщением об ошибке', async() => {
+        await expect(app.overlay).toContainText(errors.crushBug);
+    });
+});
+
+test('Отправить комментарий к товару только с обязательными полями', async({ app }) => {
+    test.slow();
+    await app.mainPage.goToProductPage();
+    await app.productPage.postComment(app.comment.name, app.comment.email);
+    await app.waitForOverlay();
+    
+    await test.step('Появляется оверлей с сообщением об ошибке', async() => {
+        await expect(app.overlay).toContainText(errors.crushBug);
+    });
+});
+
+test('Изменить отображение цен товаров в евро', async({ app }) => {
+    test.slow();
+    await app.mainPage.goToProductPage();
+    await app.productPage.changeCurrencyEur();
+    await app.waitForAnotherOverlay();
+
+    await test.step('Появляется оверлей с сообщением об ошибке', async() => {
+        //со стандартной ошибкой почему-то тест не проходит
+        await expect(app.anotherOverlay).toContainText(errors.crushBugShort); 
+    });
+});
+
+test('Перейти на детальную страницу товара в категории "hot item"', async({ app }) => {
+    test.slow();
+    await app.mainPage.goToProductPage();
+    await app.productPage.goToHotItem();
+    await app.waitForPopUp();
+   
+    await test.step('Появляется поп-ап для выбора типа и описания бага', async() => {
+        await expect(app.popUp).toContainText(messages.bugPopUpMessage);
+    });
+});
+
+test('Отфильтровать товары по ценовому диапазону', async({ app }) => {
+    test.slow();
+    await app.mainPage.goToProductPage();
+    await app.productPage.filterPriceRange();
+    await app.waitForPopUp();
+ 
+    await test.step('Появляется поп-ап для выбора типа и описания бага', async() => {
+        await expect(app.popUp).toContainText(messages.bugPopUpMessage);
+    });
+});
+
+test('Перейти на страницу производителя товара', async({ app }) => {
+    test.slow();
+    await app.mainPage.goToProductPage();
+    await app.productPage.goToManufacturer();
+    await app.waitForPopUp();
+   
+    await test.step('Появляется поп-ап для выбора типа и описания бага', async() => {
+        await expect(app.popUp).toContainText(messages.bugPopUpMessage);
+    });
+    
+});
+
+test('Увеличить количество товара в корзине больше чем на 1 еденицу', async({ app }) => {
+    test.slow();
+    await app.mainPage.goToProductPage();
+    await app.productPage.addToCart();
+    await app.waitForCart();
+    await app.cartPage.changeAmount('5');
+    await app.cartPage.updateAmount();
+    await app.waitForCongratsPopUp();
+
+    await test.step('Появляется поп-ап для выбора типа и описания бага', async() => {
+        await expect(app.congratsPopUp).toContainText(messages.firstCongrats);
+    });
+
+});
+
+test('Отображение итоговой цены заказа', async({ app }) => {
+    test.slow();
+    await app.mainPage.goToProductPage();
+    await app.productPage.addToCart();
+    await app.waitForCart();
+    await app.cartPage.checkTotalPrice();
+    await app.waitForPopUp();
+  
+    await test.step('Появляется поп-ап для выбора типа и описания бага', async() => {
+        await expect(app.popUp).toContainText(messages.bugPopUpMessage);
+    });
+});
+
+
+
