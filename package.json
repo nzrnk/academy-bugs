@@ -1,0 +1,30 @@
+{
+  "name": "academy-bugs",
+  "version": "1.0.0",
+  "description": "Репозиторий для проекта https://academybugs.com/find-bugs/",
+  "main": "index.js",
+  "scripts": {
+    "reportAwesome" : "npx allure awesome ./allure-results  --single-file"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nzrnk/academy-bugs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nzrnk/academy-bugs/issues"
+  },
+  "homepage": "https://github.com/nzrnk/academy-bugs#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.10"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "allure": "^3.0.0-beta.10",
+    "allure-playwright": "^3.2.1"
+  }
+}
