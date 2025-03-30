@@ -11,8 +11,14 @@
 ## Описание
 Данный репозиторий содержит набор e2e тестов для проекта AcademyBugs.com
 ---
+
+
+
+
 ## Стек
 ![JavaScript](https://icongr.am/devicon/javascript-original.svg?size=50&color=currentColor)
+
+
 
 
 
