@@ -19,7 +19,7 @@
 
 
 ## Стек
-![JavaScript](https://icongr.am/devicon/javascript-original.svg?size=50&color=currentColor)![PW](<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="PW" width="50" height="50" />)
+![JavaScript](https://icongr.am/devicon/javascript-original.svg?size=50&color=currentColor)(<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="PW" width="50" height="50" />)
 
 Тесты для данного проекта написаны с использованием JS + Playwright, для CI/CD используется Github Actions, генерация отчетов в Allure.
 
