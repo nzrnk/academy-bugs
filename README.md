@@ -20,6 +20,7 @@
 
 ## Стек
 ![JavaScript](https://icongr.am/devicon/javascript-original.svg?size=50&color=currentColor)
+
 Тесты для данного проекта написаны с использованием JS + Playwright, для CI/CD используется Github Actions, генерация отчетов в Allure.
 
 ---
