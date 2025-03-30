@@ -12,5 +12,5 @@
 Данный репозиторий содержит набор e2e тестов для проекта AcademyBugs.com
 ---
 ## Стек
-![JavaScript](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg)
+![JavaScript](https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg)
 Тесты для данного проекта написаны с использованием JS + Playwright, 
