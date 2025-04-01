@@ -1,0 +1,275 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Перейти на страницу производителя товара
+- Location: C:\Users\anzrn\academy-bugs\tests\products.spec.js:61:5
+
+# Error details
+
+```
+Error: locator.waitFor: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('#bug-popup') to be visible
+
+    at C:\Users\anzrn\academy-bugs\src\pages\app.page.js:38:30
+    at App.waitForPopUp (C:\Users\anzrn\academy-bugs\src\pages\app.page.js:37:20)
+    at C:\Users\anzrn\academy-bugs\tests\products.spec.js:65:15
+```
+
+# Page snapshot
+
+```yaml
+- dialog "cookieconsent":
+  - text: "We use cookies to optimize our website and our service:"
+  - link "Cookie Policy"
+  - button "Functional only"
+  - button "Accept cookies"
+- link "Skip to content"
+- banner:
+  - heading "AcademyBugs.com" [level=3]:
+    - link "AcademyBugs.com"
+  - navigation:
+    - list:
+      - listitem:
+        - link "Examples of Bugs"
+      - listitem:
+        - link "Types of Bugs"
+      - listitem:
+        - link "Find Bugs"
+      - listitem:
+        - link "Report Bugs"
+      - listitem:
+        - link ""
+- main:
+  - article:
+    - heading "Find Bugs" [level=3]
+    - heading "Explore a practice test site that has 25 real bugs planted inside." [level=6]
+    - text: View
+    - link "10"
+    - link "25"
+    - link "50"
+    - text: Showing all 18 results
+    - combobox:
+      - option "Default Sorting" [selected]
+      - option "Price Low-High"
+      - option "Price High-Low"
+      - option "Title A-Z"
+      - option "Title Z-A"
+      - option "Newest"
+      - option "Oldest"
+      - option "Best Rating"
+      - option "Most Viewed"
+    - list:
+      - listitem:
+        - link
+        - img "DNK Yellow Shoes"
+        - heading "DNK Yellow Shoes" [level=3]:
+          - link "DNK Yellow Shoes"
+        - text: $45.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Dark Grey Jeans"
+        - heading "Dark Grey Jeans" [level=3]:
+          - link "Dark Grey Jeans"
+        - text: $46.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Flamingo Tshirt"
+        - heading "Flamingo Tshirt" [level=3]:
+          - link "Flamingo Tshirt"
+        - text: $15.14
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Blue Hoodie"
+        - heading "Blue Hoodie" [level=3]:
+          - link "Blue Hoodie"
+        - text: $140.00 $111.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Blue Tshirt"
+        - heading "Blue Tshirt" [level=3]:
+          - link "Blue Tshirt"
+        - text: $79.92
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Faint Washed Denim Blue Jeans"
+        - heading "Faint Washed Denim Blue Jeans" [level=3]:
+          - link "Faint Washed Denim Blue Jeans"
+        - text: $117.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Dark Blue Denim Jeans"
+        - heading "Dark Blue Denim Jeans" [level=3]:
+          - link "Dark Blue Denim Jeans"
+        - link "Login for Pricing"
+      - listitem:
+        - link
+        - img "Boho Bangle Bracelet"
+        - heading "Boho Bangle Bracelet" [level=3]:
+          - link "Boho Bangle Bracelet"
+        - text: $185.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Anchor Bracelet"
+        - heading "Anchor Bracelet" [level=3]:
+          - link "Anchor Bracelet"
+        - text: $275.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Buddha Bracelet"
+        - heading "Buddha Bracelet" [level=3]:
+          - link "Buddha Bracelet"
+        - text: $107.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Light Brown Purse"
+        - heading "Light Brown Purse" [level=3]:
+          - link "Light Brown Purse"
+        - text: $77.04
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Black Over-the-shoulder Handbag"
+        - heading "Black Over-the-shoulder Handbag" [level=3]:
+          - link "Black Over-the-shoulder Handbag"
+        - text: $478.00
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Bright Red Bag"
+        - heading "Bright Red Bag" [level=3]:
+          - link "Bright Red Bag"
+        - text: $92.94
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "White Underground Tshirt"
+        - heading "White Underground Tshirt" [level=3]:
+          - link "White Underground Tshirt"
+        - text: $136.12
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Bright Gold Purse With Chain"
+        - heading "Bright Gold Purse With Chain" [level=3]:
+          - link "Bright Gold Purse With Chain"
+        - text: $124.53
+        - link "ADD TO CART"
+      - listitem:
+        - link
+        - img "Fall Coat"
+        - heading "Fall Coat" [level=3]:
+          - link "Fall Coat"
+        - text: $189.95 $169.95
+        - link "Select Options"
+      - listitem:
+        - link
+        - img "Denim Coat"
+        - heading "Denim Coat" [level=3]:
+          - link "Denim Coat"
+        - text: $149.95 $109.95
+        - link "Select Options"
+      - listitem:
+        - link
+        - img "Professional Suit"
+        - heading "Professional Suit" [level=3]:
+          - link "Professional Suit"
+        - text: $279.95 $239.95
+        - link "Select Options"
+    - paragraph
+- contentinfo:
+  - list:
+    - listitem:
+      - link "uTest":
+        - img "uTest"
+    - listitem:
+      - link "Terms & Conditions"
+    - listitem:
+      - link "Privacy Policy"
+- link ""
+```
+
+# Test source
+
+```ts
+   1 | import { MainPage, ProductPage, AccountPage, CartPage, SignUpPage } from './index'
+   2 | import { Comment } from "../bulders/comment.builder";
+   3 | import { test } from '@playwright/test';
+   4 |
+   5 |
+   6 | export class App {
+   7 |     constructor(page){
+   8 |         this.page = page;
+   9 |         this.mainPage = new MainPage(page);
+  10 |         this.productPage = new ProductPage(page);
+  11 |         this.signUpPage = new SignUpPage(page);
+  12 |         this.cartPage = new CartPage(page);
+  13 |         this.accountPage = new AccountPage(page);
+  14 |         this.comment = new Comment();
+  15 |
+  16 |         
+  17 |         this.mainPageLink = page.getByRole('link', { name: 'Find Bugs' });
+  18 |         
+  19 |         this.overlay = page.locator('div').filter({ hasText: 'You found a crash bug,' });
+  20 |         //добавил другой селектор, так как overlay не всегда проходит, хотя элемент тот же самый
+  21 |         this.anotherOverlay = page.locator('div').filter({ hasText: 'You found a crash bug,' }).nth(1) 
+  22 |         
+  23 |         this.popUp = page.locator('#bug-popup');
+  24 |         this.congratsPopUp = page.locator('#popmake-4406');
+  25 |         
+  26 |         this.cart = page.locator('.single-entry-content');
+  27 |     }
+  28 |
+  29 |     
+  30 |     async goToMainPage(){
+  31 |         await test.step('Перейти на главную страницу', async() => {
+  32 |             await this.mainPageLink.click();
+  33 |         });
+  34 |     }
+  35 |
+  36 |     async waitForPopUp(){
+  37 |         await test.step('Ожидать загрузки поп-апа с информацией по багу', async() => {
+> 38 |             await this.popUp.waitFor({ state: 'visible' });
+     |                              ^ Error: locator.waitFor: Test timeout of 90000ms exceeded.
+  39 |         });
+  40 |     }
+  41 |
+  42 |     async waitForOverlay(){
+  43 |         await test.step('Ожидать загрузки оверлея', async() => {
+  44 |             await this.overlay.waitFor({ state: 'visible' });
+  45 |         });
+  46 |     }
+  47 |
+  48 |     async waitForCart(){
+  49 |         await test.step('Ожидать загрузки корзины', async() => {
+  50 |             await this.cart.waitFor({ state: 'visible' });
+  51 |         });
+  52 |     }
+  53 |     
+  54 |     async waitForCongratsPopUp(){
+  55 |         await test.step('Ожидать загрузки поп-апа с поздравлением о найденном первом баге', async() => {
+  56 |             await await this.congratsPopUp.waitFor({ state: 'visible' });
+  57 |         })
+  58 |     }
+  59 |
+  60 |     async waitForAnotherOverlay(){
+  61 |         await test.step('Ожидать загрузки оверлея', async() => {
+  62 |             await this.anotherOverlay.waitFor({ state: 'visible' });
+  63 |         });
+  64 |     }
+  65 | }
+```
