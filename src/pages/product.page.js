@@ -28,7 +28,7 @@ export class ProductPage {
             await this.emailField.fill(email);
             await this.commentButton.click();
         });
-    };
+    }
 
     async changeCurrencyEur(){
         await test.step('Изменить отображение цен на сайте в евро', async() => {
