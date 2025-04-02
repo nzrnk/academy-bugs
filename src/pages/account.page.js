@@ -16,13 +16,13 @@ export class AccountPage{
         await test.step('Ожидать загрузки платежной информации', async() => {
             await this.billingAddressLoader.waitFor({ state: 'visible' });
             await this.billingAddressLoader.click({ force: true });
-        });
+        })
     }
 
     async goToBillingInformation(){
         await test.step('Перейти в раздел платежной информации', async() => {
             await this.billingInformationLink.click();
-        });
+        })
     }
 
     async updateBillingInformation(){
@@ -31,7 +31,7 @@ export class AccountPage{
             await this.billingInformationUpdateButton.click();
             await this.billingInformationLoader.waitFor({ state: 'visible' });
             await this.billingInformationLoader.click({ force: true});
-        });
+        })
     }
 
     async goToOrderHistory(){
@@ -39,6 +39,6 @@ export class AccountPage{
             await this.orderHistoryLink.click();
             await this.orderHistoryLoader.waitFor({ state: 'visible' });
             await this.orderHistoryLoader.click({ force: true });
-        });
+        })
     }
-}
+};
