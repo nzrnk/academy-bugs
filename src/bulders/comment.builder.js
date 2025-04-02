@@ -22,6 +22,6 @@ export class Comment{
             email: this.email,
             comment: this.comment,
             website: this.website,
-        }
+        };
     }
-};
+}
