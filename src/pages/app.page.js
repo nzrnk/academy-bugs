@@ -30,25 +30,25 @@ export class App {
     async goToMainPage(){
         await test.step('Перейти на главную страницу', async() => {
             await this.mainPageLink.click();
-        });
+        })
     }
 
     async waitForPopUp(){
         await test.step('Ожидать загрузки поп-апа с информацией по багу', async() => {
             await this.popUp.waitFor({ state: 'visible' });
-        });
+        })
     }
 
     async waitForOverlay(){
         await test.step('Ожидать загрузки оверлея', async() => {
             await this.overlay.waitFor({ state: 'visible' });
-        });
+        })
     }
 
     async waitForCart(){
         await test.step('Ожидать загрузки корзины', async() => {
             await this.cart.waitFor({ state: 'visible' });
-        });
+        })
     }
     
     async waitForCongratsPopUp(){
@@ -60,6 +60,6 @@ export class App {
     async waitForAnotherOverlay(){
         await test.step('Ожидать загрузки оверлея', async() => {
             await this.anotherOverlay.waitFor({ state: 'visible' });
-        });
+        })
     }
-}
+};
