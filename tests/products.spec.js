@@ -47,7 +47,7 @@ test('@Bug Перейти на детальную страницу товара 
     });
 });
 
-test('@Bug Отфильтровать товары по ценовому диапазону', async({ app }) => {
+test('@Bug Отфильтровать товары по ценовому диапазону "$15.00 - $19.99"', async({ app }) => {
     test.slow();
     await app.mainPage.goToProductPage();
     await app.productPage.filterPriceRange();
