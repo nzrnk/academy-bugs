@@ -2,7 +2,7 @@ import { test } from '../src/fixture/fixture';
 import { expect } from '@playwright/test';
 import { messages, email } from '../src/data/index';
 
-test('Восстановить пароль c email зарегистрированного пользователя', async({ app }) => {
+test('@Bug Восстановить пароль c email зарегистрированного пользователя', async({ app }) => {
     test.slow()
     await app.mainPage.goToProductPage();
     await app.productPage.goToSignUpPage();
@@ -16,7 +16,7 @@ test('Восстановить пароль c email зарегистрирова
     });
 
 
-test('Проверить вывод платежной информации', async({ auth }) => {
+test('@Bug Проверить вывод платежной информации', async({ auth }) => {
     test.slow()
     await auth.accountPage.getBillingInformation();
     await auth.waitForPopUp();
@@ -26,7 +26,7 @@ test('Проверить вывод платежной информации', as
     });
 });
 
-test('Обновить платежную информацию', async({ auth }) => {
+test('@Bug Обновить платежную информацию', async({ auth }) => {
     test.slow()
     await auth.accountPage.goToBillingInformation();
     await auth.accountPage.updateBillingInformation();
@@ -37,7 +37,7 @@ test('Обновить платежную информацию', async({ auth })
     });
 });
 
-test('Проверить отображение истории заказов', async({ auth }) => {
+test('@Bug Проверить отображение истории заказов', async({ auth }) => {
     test.slow()
     await auth.goToMainPage();
     await auth.mainPage.goToProductPage();
