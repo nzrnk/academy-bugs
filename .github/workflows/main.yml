@@ -5,7 +5,6 @@ permissions:
   contents: write
 
 on:
-  #ручной запуск
   workflow_dispatch:
 
 jobs:
