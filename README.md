@@ -57,6 +57,6 @@ npm run create report
 npm run open report
 ```
 ---
-## Пример Allure отчета
+##[Пример Allure отчета](https://nzrnk.github.io/academy-bugs/)
 ![Пример Отчета](./images/allure.jpg)
 
