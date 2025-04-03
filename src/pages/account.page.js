@@ -41,4 +41,6 @@ export class AccountPage{
             await this.orderHistoryLoader.click({ force: true });
         });
     }
+
 }
+

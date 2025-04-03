@@ -54,6 +54,7 @@ export class App {
     async waitForCongratsPopUp(){
         await test.step('Ожидать загрузки поп-апа с поздравлением о найденном первом баге', async() => {
             await await this.congratsPopUp.waitFor({ state: 'visible' });
+
         });
     }
 
@@ -62,4 +63,6 @@ export class App {
             await this.anotherOverlay.waitFor({ state: 'visible' });
         });
     }
+
 }
+

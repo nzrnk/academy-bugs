@@ -20,7 +20,9 @@ export class MainPage {
         await test.step('Перейти на детальную страницу товара', async() => {
             await this.product.waitFor({ state: 'visible' });
             await this.product.click();
+
         });
     }
 
 }
+

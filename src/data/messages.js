@@ -7,8 +7,11 @@ const errors = {
 const messages = {
     firstCongrats: '#1 Awesome! You found a bug. Pretty easy right?',
     bugPopUpMessage: 'What did you find out?',
+
 };
 
 
-
 export { errors, messages };
+
+
+
