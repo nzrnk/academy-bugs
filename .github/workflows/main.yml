@@ -45,7 +45,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: simple-elf/allure_report-action@master
+      - uses: simple-elf/allure-report-action@master
         if: always()
         continue-on-error: true
         id: allure-report
