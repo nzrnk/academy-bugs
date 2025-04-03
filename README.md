@@ -61,6 +61,8 @@ npm run open report
 ---
 ## Запуск [workflow в GitHub Actions](https://github.com/nzrnk/academy-bugs/actions/workflows/main.yml)
 
+Workflow настроен на ручной запуск через Github Actions. Для этого нужно перейти в раздел Actions в репозитории, выбрать нужный workflow и нажать "Run workflow".
+
 <img src="./images/git.jpg" alt="allure" width="1100" height="400"/>
 
 ---
