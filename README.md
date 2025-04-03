@@ -5,6 +5,7 @@
 - [Стек](#Стек)
 - [Тест-кейсы](#Тест-кейсы)
 - [Запуск тестов и генерация отчетов](#Запуск-тестов-и-генерация-отчетов)
+- [Запуск workflow в GitHub Actions](#Запуск-workflow-в-Github-Actions)
 - [Пример Allure отчета](#Пример-Allure-отчета)
 
 
@@ -57,6 +58,11 @@ npm run test`
 npm run create report
 npm run open report
 ```
+---
+## Запуск [workflow в GitHub Actions](https://github.com/nzrnk/academy-bugs/actions/workflows/main.yml)
+
+<img src="./images/git.jpg" alt="allure" width="1100" height="400"/>
+
 ---
 ## Пример [Allure отчета](https://nzrnk.github.io/academy-bugs/)
 <!--![Пример Отчета](./images/allure.jpg) -->
