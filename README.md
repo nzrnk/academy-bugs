@@ -58,5 +58,5 @@ npm run open report
 ```
 ---
 ## Пример Allure отчета
-
+![Пример Отчета](./images/allure.jpg)
 
