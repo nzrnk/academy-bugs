@@ -60,5 +60,5 @@ npm run open report
 ---
 ## Пример [Allure отчета](https://nzrnk.github.io/academy-bugs/)
 <!--![Пример Отчета](./images/allure.jpg) -->
-<img src="./images/allure.jpg" alt="allure" width="200" height="200"/>
+<img src="./images/allure.jpg" alt="allure" width="1500" height="1000"/>
 
