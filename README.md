@@ -68,5 +68,5 @@ Workflow настроен на ручной запуск через Github Actio
 ---
 ## Пример [Allure отчета](https://nzrnk.github.io/academy-bugs/)
 
-<img src="./images/allure.jpg" alt="allure" width="1100" height="400"/>
+<img src="./images/allure.jpg" alt="allure" width="1200" height="500"/>
 
